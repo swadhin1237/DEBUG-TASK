@@ -62,7 +62,8 @@ def get_total_points(data):
         total_points[key] = 0
         for j in data["AVENGERS"][i]['points']:
             total_points[key] += data["AVENGERS"][i]['points'][j]
-    for i in data["DCU"]:
+    # DCU to DC
+    for i in data["DC"]:
         key = data["DC"][i]["name"]
         total_points[key] = 0
         for j in data["DC"][i]['points']:
@@ -114,4 +115,4 @@ def get_names(data):
 
 
 # returns a list
-print(get_oldest_avenger(data))
+print(get_total_points(data))
