@@ -17,7 +17,7 @@ data = read_data(filepaths)
 
 
 def get_oldest(data):
-    max = float('inf')
+    max = 0
     c = 0
 
     for i in data["AVENGERS"]:
@@ -111,4 +111,4 @@ def get_names(data):
 
 
 # returns a list
-print(type(data))
+print(get_oldest(data))
