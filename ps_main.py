@@ -9,6 +9,7 @@ filepaths = 'data.json'
 def read_data(filepaths):
     with open(filepaths) as json_file:
         data = json.load(json_file)
+    # MAKE A RETURN
     return data
     # Read data from filepaths
 
@@ -17,6 +18,7 @@ data = read_data(filepaths)
 
 
 def get_oldest(data):
+    # MAKE max to 0
     max = 0
     c = 0
 
@@ -42,9 +44,10 @@ def get_oldest(data):
 
 def get_oldest_avenger(data):
     max = 0
-    for i, j in data["AVENGERS"]:
+    # REMOVE j
+    for i in data["AVENGERS"]:
         if (data["AVENGERS"][i]['age'] > max):
-            max = data["AVENGERS"][j]['age']
+            max = data["AVENGERS"][i]['age']
             oldest_avenger = data["AVENGERS"][i]
     # Return all info of the oldest avenger
     return oldest_avenger
@@ -111,4 +114,4 @@ def get_names(data):
 
 
 # returns a list
-print(get_oldest(data))
+print(get_oldest_avenger(data))
