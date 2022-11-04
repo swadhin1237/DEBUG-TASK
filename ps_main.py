@@ -107,13 +107,14 @@ def get_more_than_average(data):
 
 def get_names(data):
     names = []
+    # HERE TWO WAY POSSIBLE CHANGE insert to append otherwise give two parameter.
     for i in data["AVENGERS"]:
-        names.insert(data[i][1])
+        names.append(data["AVENGERS"][i]["name"])
     for j in data["DC"]:
-        names.insert(data[j][1])
+        names.append(data["DC"][j]["name"])
     # Return a list of superhero names
     return names
 
 
 # returns a list
-print(get_more_than_average(data))
+print(get_names(data))
