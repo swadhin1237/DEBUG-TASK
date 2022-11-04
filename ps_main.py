@@ -117,4 +117,3 @@ def get_names(data):
 
 
 # returns a list
-print(get_names(data))
