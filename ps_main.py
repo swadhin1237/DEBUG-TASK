@@ -3,12 +3,13 @@
 
 import json
 from multiprocessing.sharedctypes import Value
-filepaths = '/content/data.json'
+filepaths = 'data.json'
 
 
 def read_data(filepaths):
     with open(filepaths) as json_file:
         data = json.load(json_file)
+    return data
     # Read data from filepaths
 
 
@@ -108,4 +109,6 @@ def get_names(data):
     # Return a list of superhero names
     return names
 
+
 # returns a list
+print(type(data))
