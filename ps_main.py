@@ -77,7 +77,8 @@ def get_total_points(data):
 
 
 def get_more_than_average(data):
-    more_than_average = ()
+    # CONVERT TURPLE TO DICT
+    more_than_average = {}
     avg_mcu = 0
     avg_dc = 0
     for i in data["AVENGERS"]:
@@ -115,4 +116,4 @@ def get_names(data):
 
 
 # returns a list
-print(get_total_points(data))
+print(get_more_than_average(data))
